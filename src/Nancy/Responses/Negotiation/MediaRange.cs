@@ -28,9 +28,12 @@ namespace Nancy.Responses.Negotiation
 
             if (parts.Length < 2)
             {
-                {
+                this.Type = parts[0];
+                this.Subtype = parts[0];
+              return;
+              /*{
                     throw new ArgumentException("inputString not in correct Type/SubType format", contentType);
-                }
+                }*/
             }
 
             this.Type = parts[0];
