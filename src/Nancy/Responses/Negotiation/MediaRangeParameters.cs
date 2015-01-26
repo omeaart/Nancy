@@ -102,6 +102,7 @@
         {
             var dictionary = parameters.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries)
                .Select(part => part.Split('='))
+               .Where(split => split.Length > 1) //ignore parts without an =
                .ToDictionary(split => split[0].Trim(), split => split[1].Trim());
 
             return new MediaRangeParameters(dictionary);
