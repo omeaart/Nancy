@@ -30,10 +30,7 @@ namespace Nancy.Responses.Negotiation
             {
                 this.Type = parts[0];
                 this.Subtype = parts[0];
-              return;
-              /*{
-                    throw new ArgumentException("inputString not in correct Type/SubType format", contentType);
-                }*/
+                return;
             }
 
             this.Type = parts[0];
